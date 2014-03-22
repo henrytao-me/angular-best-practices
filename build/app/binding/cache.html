@@ -1,0 +1,18 @@
+<div class="addon-binding addon-binding-function">
+    <div class="wrapper">
+        <h1>
+            <span>binding a function</span>
+            <a href="http://henrytao.me" style="font-size:16px">(by HenryTao)</a>
+        </h1>
+        <h3>
+            <div>Number of called: <span ng-bind="func.numOfCall"></span></div>
+        </h3>
+        <div>
+            <a class="btn btn-warning" ng-click="func.increaseValue()">
+                <span>Increase value</span>
+                (<span ng-bind="func.getValue()"></span>)
+            </a>
+        </div>
+        
+    </div>
+</div>

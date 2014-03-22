@@ -1,0 +1,50 @@
+<div class="addon-binding addon-binding-solution">
+    <div class="wrapper">
+        <h1>
+            <span>ux-angularjs-datagrid 50.000 binding</span>
+            <a href="http://henrytao.me" style="font-size:16px">(by HenryTao)</a>
+        </h1>
+        <h3>
+            <div>Time start: <span ng-bind="loggerInit.iStart"></span></div>
+            <div>Time end: <span ng-bind="loggerInit.iEnd"></span></div>
+            <div>Cost: <span ng-bind="loggerInit.iCost"></span> ms</div>
+        </h3>
+        <h3 class="clearfix">
+            <div class="pull-left">
+                <div>Time start: <span ng-bind="loggerEdit.iStart"></span></div>
+                <div>Time end: <span ng-bind="loggerEdit.iEnd"></span></div>
+                <div>Cost: <span ng-bind="loggerEdit.iCost"></span> ms</div>                
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-danger" ng-click="loggerEdit.changeData()">Change Data</a>
+                <a class="btn btn-warning" ng-click="loggerEdit.checkDiff()">Check Table Content <span ng-bind="loggerEdit.diffLabel"></span></a>
+            </div>
+        </h3>
+        <div style="position:fixed;top: 320px; left: 10px; right: 10px; bottom: 10px; overflow-y: scroll; border:1px solid #ccc">
+            <div id="test" data-ux-datagrid="data.data" class="datagrid" data-addons="iScrollAddon">
+                <script type="template/html" data-template-name="default" data-template-item="r">
+                    <div class="row {{fake}}">
+                        <div class="wrapper clearfix">
+                            <div class="pull-left" style="width:10%">
+                                <div class="wrapper"><span ng-bind="r.id"></span></div>
+                            </div>
+                            <div class="pull-left" style="width:20%">
+                                <div class="wrapper"><span ng-bind="r.firstname"></span></div>
+                            </div>
+                            <div class="pull-left" style="width:20%">
+                                <div class="wrapper"><span ng-bind="r.lastname"></span></div>
+                            </div>
+                            <div class="pull-left" style="width:20%">
+                                <div class="wrapper"><span ng-bind="r.gender"></span></div>
+                            </div>
+                            <div class="pull-left" style="width:30%">
+                                <div class="wrapper"><span ng-bind="r.timestamp"></span></div>
+                            </div>
+                        </div>                        
+                    </div>
+                </script>
+            </div> 
+        </div>     
+        
+    </div>
+</div>

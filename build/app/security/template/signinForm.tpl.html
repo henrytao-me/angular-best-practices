@@ -1,0 +1,29 @@
+<form name="form" novalidate="" class="">
+	<div class="modal-header" style="padding-left:20px; paddding-right:20px">
+		<div class="h3">SIGN IN</div>
+	</div>
+	<div class="modal-body">
+		<div class="alert alert-warning" ng-show="authReason">
+			{{authReason}}
+		</div>
+		<div class="alert alert-danger" ng-show="authError">
+			{{authError}}
+		</div>
+		<div class="form-group">
+			<label for="">Email address</label>
+			<input type="email" class="form-control input-lg" ng-model="user.email" placeholder="Enter email" ng-ex-enter="signin()">
+		</div>
+		<div class="form-group">
+			<label for="">Password</label>
+			<input type="password" class="form-control input-lg" ng-model="user.password" placeholder="Password" ng-ex-enter="signin()">
+		</div>
+		<div class="clearfix">
+			<a href="/forgot-password" onclick="window.location.href='/forgot-password'" class="pull-left none" style="color:#666">Forgot your password?</a>
+			<a href="/signup" class="pull-right" onclick="window.location.href='/signup'" style="color:#666">Haven't signed up?</a>	
+		</div>		
+	</div>
+	<div class="modal-footer" style="margin-top:0px">
+		<button class="btn btn-default btn-theme signin btn-lg" style="text-transform:uppercase; width:100%" ng-click="signin()" ng-disabled="form.$invalid">Sign in</button>
+		<!-- <btn class="btn btn-default" ng-click="cancelSignin()">Cancel</btn> -->
+	</div>
+</form>

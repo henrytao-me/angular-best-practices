@@ -1,0 +1,46 @@
+<div class="addon-binding addon-binding-problem">
+    <div class="wrapper">
+        <h1>
+            <span>ng-repeat table 2.500 binding</span>
+            <a href="http://henrytao.me" style="font-size:16px">(by HenryTao)</a>
+        </h1>
+        <h3>
+            <div>Time start: <span ng-bind="loggerInit.iStart"></span></div>
+            <div>Time end: <span ng-bind="loggerInit.iEnd"></span></div>
+            <div>Cost: <span ng-bind="loggerInit.iCost"></span> ms</div>
+        </h3>
+        <h3 class="clearfix">
+            <div class="pull-left">
+                <div>Time start: <span ng-bind="loggerEdit.iStart"></span></div>
+                <div>Time end: <span ng-bind="loggerEdit.iEnd"></span></div>
+                <div>Cost: <span ng-bind="loggerEdit.iCost"></span> ms</div>                
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-danger" ng-click="loggerEdit.changeData()">Change Data</a>
+                <a class="btn btn-warning" ng-click="loggerEdit.checkDiff()">Check Table Content <span ng-bind="loggerEdit.diffLabel"></span></a>
+            </div>
+        </h3>
+        <div style="position:fixed;top: 320px; left: 10px; right: 10px; bottom: 10px; overflow-y: scroll; border:1px solid #ccc">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>firtname</td>
+                        <td>lastname</td>
+                        <td>gender</td>
+                        <td>timestamp</td>
+                    </tr>
+                </thead>
+                <tbody id="test">
+                    <tr ng-repeat="r in data.data">
+                        <td ng-bind="r.id"></td>
+                        <td ng-bind="r.firstname"></td>
+                        <td ng-bind="r.lastname"></td>
+                        <td ng-bind="r.gender"></td>
+                        <td ng-bind="r.timestamp"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+</div>
